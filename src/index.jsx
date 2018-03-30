@@ -6,6 +6,7 @@ import { Provider } from 'react-redux';
 // Local Imports
 import Routes from './js/routes';
 import store from './js/store';
+import './styles/app.scss';
 
 // Render
 class App extends Component {
