@@ -5,7 +5,7 @@ const webpack = require('webpack');
 module.exports = merge(common, {
   devtool: 'cheap-module-source-map',
   devServer: {
-    contentBase: './dist',
+    contentBase: './public',
     historyApiFallback: true,
   },
   plugins: [

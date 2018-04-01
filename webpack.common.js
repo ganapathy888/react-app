@@ -1,6 +1,5 @@
 // Vendor Imports
 const path = require('path');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -21,16 +20,14 @@ module.exports = {
   },
   output: {
     filename: '[name].[hash].js',
+    path: path.resolve(__dirname, 'build'),
   },
   module: {
     rules: [
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
-        use: [
-          "babel-loader",
-          "eslint-loader",
-        ],
+        use: ['babel-loader', 'eslint-loader'],
         use: ['babel-loader', 'eslint-loader'],
       },
       {
@@ -72,7 +69,6 @@ module.exports = {
       format: 'Build [:bar] :percent (:elapsed seconds)',
       clear: false,
     }),
-    new CleanWebpackPlugin(['dist']),
     extractSass,
     new HtmlWebpackPlugin({
       template: 'src/index.html',
