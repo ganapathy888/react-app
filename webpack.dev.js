@@ -6,6 +6,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = merge(common, {
   devtool: 'cheap-module-source-map',
   devServer: {
+    port: 8080,
     contentBase: './public',
     historyApiFallback: true,
   },
