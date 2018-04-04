@@ -14,7 +14,7 @@ export default () => (
       </h1>
       <hr className="my-4" />
       <p>
-        You can remove this component from here <code>/src/js/components/App</code>.
+        You can remove this component from here <code>src/js/components/App</code>.
       </p>
     </div>
   </div>

@@ -4,6 +4,7 @@ const common = require('./webpack.common.js');
 const CompressionPlugin = require('compression-webpack-plugin');
 const webpack = require('webpack');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const compression = new CompressionPlugin({
   asset: '[file]',
@@ -21,5 +22,10 @@ module.exports = merge(common, {
     new CleanWebpackPlugin(['build']),
     new UglifyJSPlugin(),
     compression,
+    new HtmlWebpackPlugin({
+      title: 'React App',
+      template: 'src/index.html',
+      env: 'production',
+    }),
   ],
 });
