@@ -5,7 +5,7 @@ const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 
 // SASS Plugin
 const extractSass = new ExtractTextPlugin({
-  filename: '[name].[contenthash].css',
+  filename: '[name].[hash].css',
   disable: process.env.NODE_ENV === 'development',
 });
 
