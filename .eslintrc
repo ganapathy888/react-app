@@ -4,13 +4,14 @@
   "env": {
     "browser": true
   },
+  "plugins": [
+    "babel"
+  ],
   "rules": {
     "react/prop-types": 0,
-    "react/no-unused-state": 0,
     "no-console": 0,
     "no-unused-expressions": [2, { "allowTernary": true }],
-    "import/no-extraneous-dependencies": 0,
-    "import/no-unresolved": 0,
-    "import/extensions": 0
+    "babel/no-invalid-this": 1,
+    "no-invalid-this": 0
   }
 }
