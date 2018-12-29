@@ -3,13 +3,15 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 // Local Imports
-import App from '../components/App';
+import App from '../App';
 
 // Not Found Component
 const NoMatch = ({ location }) => (
   <div>
     <h3>
-      No match for <code>{location.pathname}</code>
+      No match for
+      {' '}
+      <code>{location.pathname}</code>
     </h3>
   </div>
 );
